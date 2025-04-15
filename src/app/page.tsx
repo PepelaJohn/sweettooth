@@ -4,8 +4,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { scaleIn } from '@/components/animations/AnimatedElements'
+// import { scaleIn } from '@/components/animations/AnimatedElements'
 import { Menu, X } from 'lucide-react'
+import ContactUs from '@/components/NewContact'
 
 // Define types for our products
 interface Product {
@@ -375,74 +376,7 @@ const Home: NextPage = () => {
         </motion.a>
       </section>
 
-      {/* Contact Form */}
-      <section className="py-16 px-6 md:px-10 flex justify-center w-full">
-      <div className=' flex  flex-col'>
-      <h2 className="text-2xl md:text-3xl font-bold mb-10">Contact Us</h2>
-        <p className="mb-6 max-w-xl">
-          Interested in collaborating or have a specific request? Just send us an email
-          to learn more. We can't wait to hear from you!
-        </p>
-      </div>
-        
-        <form onSubmit={handleSubmit} className="max-w-2xl flex-1">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <div>
-              <label htmlFor="firstName" className="block text-sm mb-1">First Name <span className="text-gray-400">(required)</span></label>
-              <input 
-                type="text" 
-                id="firstName" 
-                value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-                required
-                className="w-full border border-gray-300 px-3 py-2 focus:outline-none focus:border-black"
-              />
-            </div>
-            <div>
-              <label htmlFor="lastName" className="block text-sm mb-1">Last Name <span className="text-gray-400">(required)</span></label>
-              <input 
-                type="text" 
-                id="lastName" 
-                value={lastName}
-                onChange={(e) => setLastName(e.target.value)}
-                required
-                className="w-full border border-gray-300 px-3 py-2 focus:outline-none focus:border-black"
-              />
-            </div>
-          </div>
-          
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-sm mb-1">Email <span className="text-gray-400">(required)</span></label>
-            <input 
-              type="email" 
-              id="email" 
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="w-full border border-gray-300 px-3 py-2 focus:outline-none focus:border-black"
-            />
-          </div>
-          
-          <div className="mb-6">
-            <label htmlFor="message" className="block text-sm mb-1">Message <span className="text-gray-400">(required)</span></label>
-            <textarea 
-              id="message" 
-              rows={6}
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              required
-              className="w-full border border-gray-300 px-3 py-2 focus:outline-none focus:border-black"
-            ></textarea>
-          </div>
-          
-          <button 
-            type="submit" 
-            className="bg-black text-white px-6 py-2 hover:bg-gray-800 transition"
-          >
-            Send
-          </button>
-        </form>
-      </section>
+     <ContactUs></ContactUs>
 
       {/* Footer */}
       <footer className="py-16 px-6 md:px-10 bg-black text-white">

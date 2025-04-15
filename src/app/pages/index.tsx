@@ -2,7 +2,7 @@
 'use client'
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
+import {  AnimatePresence } from 'framer-motion';
 import Navbar from '../../components/Navbar';
 import Hero from '../../components/Hero';
 import About from '../../components/About';
