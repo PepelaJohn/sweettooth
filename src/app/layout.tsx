@@ -6,17 +6,17 @@ import "./globals.css";
 
 // app/page.tsx (if it's not a client component)
 export const metadata:Metadata = {
-  title: 'SweetTooth Ke',
-  description: 'Home for all things sweet',
+  title: 'SweetTooth Ke - Delicious cakes, pastries, and desserts in Kenya',
+  description: 'SweetTooth Ke brings you the most delightful cakes, pastries, and sweets delivered fresh to your door in Nairobi.',
   openGraph: {
     title: 'SweetTooth Ke',
-    description: 'Home for all things sweet',
+    description: 'SweetTooth Ke brings you the most delightful cakes, pastries, and sweets delivered fresh to your door in Nairobi.',
     url: 'https://sweettoothdemo.netlify.app/',
     images: [
       {
         url: 'https://sweettoothdemo.netlify.app/image.png',
-        width: 800,
-        height: 600,
+        width: 1200,
+        height: 630,
         alt: 'Sweet Tooth landing page',
         type: 'image/png',
       },
