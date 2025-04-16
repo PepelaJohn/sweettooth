@@ -1,6 +1,7 @@
 'use client'
+
+//app/page.tsx
 import type { NextPage } from 'next'
-import Head from 'next/head'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -75,12 +76,7 @@ const Home: NextPage = () => {
 
   return (
     <div className='relative'>
-      <Head>
-        <title>Sweet Tooth KE</title>
-        <meta name="description" content="Sweet Tooth KE - Delicious Desserts For Every Occasion" />
-        <link rel="icon" href="/favicon.ico" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-      </Head>
+     
 
       {/* Header/Navigation */}
       <motion.header 

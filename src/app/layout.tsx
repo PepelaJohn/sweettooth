@@ -1,13 +1,31 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+
 import "./globals.css";
-import Head from "next/head";
 
 
 
-export const metadata: Metadata = {
-  title: "Sweet Tooth Ke",
-  description: "Home for all things sweet",
+// app/page.tsx (if it's not a client component)
+export const metadata:Metadata = {
+  title: 'SweetTooth Ke',
+  description: 'Home for all things sweet',
+  openGraph: {
+    title: 'SweetTooth Ke',
+    description: 'Home for all things sweet',
+    url: 'https://sweettoothdemo.netlify.app/',
+    images: [
+      {
+        url: 'https://sweettoothdemo.netlify.app/image.png',
+        width: 800,
+        height: 600,
+        alt: 'Sweet Tooth landing page',
+        type: 'image/png',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
 };
 
 export default function RootLayout({
@@ -17,15 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-        <Head>
-        <title>SweetTooth Ke </title>
-        <meta property="og:title" content="SweetTooth Ke" />
-        <meta property="og:description" content="Home for all things sweet" />
-        <meta property="og:image" content="https://sweettoothdemo.netlify.app/image.png" />
-        <meta property="og:url" content="https://sweettoothdemo.netlify.app/" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
+        
       <body
        
       >
